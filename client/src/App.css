@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,200;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 69%;
+}
+
+.todo-btn {
+  cursor: pointer;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.163);
+}
+.todo-Container {
+  background-image: linear-gradient(
+    to right,
+    rgb(242, 112, 156),
+    rgb(255, 148, 114)
+  );
+
+  min-height: 100vh;
+  height: max-content;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding-top: 4rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.todo-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 2rem;
+  height: 5rem;
+  width: 24rem;
+  color: white;
+  background-color: #8661d1;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+  transition: 200ms;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+/* button:active {
+  background-color: #8661d1;
+  box-shadow: 0 7px #967cc9;
+  transform: translateY(4px);
+} */
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 1rem;
+  height: 4rem;
+  width: 24rem;
+}
+.todo-btn {
+  display: flex;
+  margin: 0;
+}
+.edit-btn {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.068);
+}
+.todo-btn-back,
+.todo-btn-new {
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+.todo-btn-back {
+  grid-area: todo-btn-back;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+.todo-btn-new {
+  grid-area: todo-btn-new;
+  display: flex;
+  justify-self: end;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+.todo-data {
+  grid-area: todo-data;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+}
+.todo-data h1 {
+  margin-bottom: 3rem;
+}
+/* .todo-list-block {
+  display: flex;
+  flex-direction: column;
+} */
+.todo-list-block li {
+  background: rgba(134, 97, 209, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  min-height: 20rem;
+  width: 24rem !important;
+  margin: 0 auto 2rem;
+}
+.todo-list-block li .title-description {
+  text-align: left;
+}
+.todo-list-block li .title-description h3 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.title {
+  text-align: center;
+  margin-bottom: 12px;
+}
+.description {
+  font-size: 14px;
+  opacity: 0.7;
+}
+.todo-list-block li .todo-btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+.todo-list-block li .todo-btn-container button:first-of-type {
+  margin-right: 2rem;
+}
+.button-new {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 24px;
+}
+.todo-list-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  /* width: 110rem; */
+  margin: 0 auto;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 24rem;
+  font-size: 2rem;
+}
+.form-container .label {
+  margin-bottom: 0.8rem;
+}
+.form-container .input {
+  margin-bottom: 2rem;
+}
+.update-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8661d15e;
+}
+.update-container .update-todo-data {
+  display: grid;
+  grid-template-areas: "close" "form";
+  background-color: #3e4451;
+  padding: 2rem 4rem 4rem;
+  border-radius: 0.5rem;
+}
+.update-container .update-todo-data .close {
+  grid-area: close;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+  /* margin-bottom: 4rem; */
+  cursor: pointer;
+  font-size: 24px;
+}
+.update-container .update-todo-data .todo-data {
+  grid-area: form;
+}
+
+@media (min-width: 586px) and (max-width: 900px) {
+  .todo-list-block {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 585px) {
+  .todo-list-block {
+    grid-template-columns: 1fr;
+  }
+}
